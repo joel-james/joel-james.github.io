@@ -3,160 +3,350 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨🏼‍🦲</text></svg>"/>
-	<title>Joel James — Open Source Developer & Algorithmic Trader</title>
+	<title>Joel James — Open Source Developer &amp; Algorithmic Trader</title>
 
 	<!-- SEO -->
-	<meta name="description" content="Joel James — open source developer and algorithmic trader from Kerala, India. Building WordPress plugins, PHP libraries, and automated MQL5 trading systems.">
-	<meta name="keywords" content="Joel James, open source developer, WordPress plugins, PHP libraries, algorithmic trading, MQL5, Expert Advisors, backtesting, Kerala, India">
+	<meta name="description" content="Joel James — open source developer and algorithmic trader from Kerala, India. Building WordPress plugins and automated trading systems at Foxe Labs.">
 	<meta name="author" content="Joel James">
-	<meta name="robots" content="index, follow">
+	<meta name="robots" content="index, follow, max-image-preview:large">
 	<link rel="canonical" href="https://joel.to/">
+	<meta name="theme-color" content="#0e2419">
 
 	<!-- Open Graph -->
-	<meta property="og:type" content="website">
+	<meta property="og:type" content="profile">
 	<meta property="og:url" content="https://joel.to/">
-	<meta property="og:title" content="Joel James — Open Source Developer & Algorithmic Trader">
-	<meta property="og:description" content="Open source developer and algorithmic trader from Kerala, India. Building WordPress plugins, PHP libraries, and automated MQL5 trading systems.">
+	<meta property="og:title" content="Joel James — Open Source Developer &amp; Algorithmic Trader">
+	<meta property="og:description" content="Open source developer and algorithmic trader from Kerala, India. Everything I build lives at Foxe Labs — lines of code, lines on the chart.">
 	<meta property="og:site_name" content="Joel James">
+	<meta property="og:locale" content="en_US">
 	<meta property="og:image" content="https://joel.to/og-image.png">
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="630">
+	<meta property="og:image:alt" content="Joel James — Open Source Developer &amp; Algorithmic Trader">
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="Joel James — Open Source Developer & Algorithmic Trader">
-	<meta name="twitter:description" content="Open source developer and algorithmic trader from Kerala, India. Building WordPress plugins, PHP libraries, and automated MQL5 trading systems.">
+	<meta name="twitter:title" content="Joel James — Open Source Developer &amp; Algorithmic Trader">
+	<meta name="twitter:description" content="Open source developer and algorithmic trader from Kerala, India. Everything I build lives at Foxe Labs.">
 	<meta name="twitter:image" content="https://joel.to/og-image.png">
+
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨🏼‍🦲</text></svg>"/>
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300;600&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,800&display=swap">
+
+	<!-- Structured data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Joel James",
+		"url": "https://joel.to/",
+		"jobTitle": "Open Source Developer & Algorithmic Trader",
+		"description": "Open source developer and algorithmic trader from Kerala, India. Builds WordPress plugins and automated MQL5 trading systems at Foxe Labs.",
+		"email": "mailto:mr.joelcj@gmail.com",
+		"address": {
+			"@type": "PostalAddress",
+			"addressRegion": "Kerala",
+			"addressCountry": "IN"
+		},
+		"worksFor": {
+			"@type": "Organization",
+			"name": "Foxe Labs",
+			"url": "https://foxelabs.com/"
+		},
+		"knowsAbout": ["WordPress", "PHP", "Open Source Software", "Algorithmic Trading", "MQL5", "Backtesting"],
+		"sameAs": [
+			"https://foxelabs.com/",
+			"https://tickerlog.io/",
+			"https://github.com/joel-james",
+			"https://linkedin.com/in/joelcj/"
+		]
+	}
+	</script>
+
 	<style>
-		/* Dracula Theme Colors */
 		:root {
-			--bg: #282a36;
-			--cur: #44475a;
-			--fg: #f8f8f2;
-			--comment: #6272a4;
-			--cyan: #8be9fd;
-			--green: #50fa7b;
-			--orange: #ffb86c;
-			--pink: #ff79c6;
-			--purple: #bd93f9;
-			--red: #ff5555;
-			--yellow: #f1fa8c;
+			--green: #0e2419;
+			--green-panel: rgba(14, 36, 25, 0.72);
+			--cream: #f2ead8;
+			--cream-dim: #c9d3c6;
+			--cream-line: rgba(242, 234, 216, 0.25);
+			--cream-hairline: rgba(242, 234, 216, 0.15);
+			--gold: #d3a84c;
+			--sage: #8ba393;
 		}
+
+		* { box-sizing: border-box; }
+
+		html { scroll-behavior: smooth; }
 
 		body {
-			background-color: #1e1e1e; /* Darker outer background */
-			color: var(--fg);
-			font-family: 'Fira Code', 'Courier New', monospace;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			min-height: 100vh;
 			margin: 0;
-			padding: 20px;
+			background: var(--green);
+			color: var(--cream);
+			font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+			position: relative;
+			overflow-x: hidden;
 		}
 
-		.terminal {
-			width: 100%;
-			max-width: 800px;
-			background: var(--bg);
-			border-radius: 10px;
-			box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-			overflow: hidden;
-			border: 1px solid var(--cur);
+		/* rain */
+		.rain {
+			position: fixed;
+			inset: -60px;
+			pointer-events: none;
+			background: repeating-linear-gradient(115deg,
+				rgba(242, 234, 216, 0.035) 0px,
+				rgba(242, 234, 216, 0.035) 1px,
+				transparent 1px,
+				transparent 9px);
+			animation: rain-drift 30s linear infinite;
+			z-index: 0;
 		}
 
-		/* Terminal Title Bar */
-		.bar {
-			background: #343746;
-			padding: 10px 15px;
+		@keyframes rain-drift {
+			from { transform: translate3d(0, 0, 0); }
+			to { transform: translate3d(-42px, 19px, 0); }
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.rain { animation: none; }
+			html { scroll-behavior: auto; }
+		}
+
+		/* giant malayalam glyphs */
+		.glyph {
+			position: absolute;
+			font-family: 'Anek Malayalam', system-ui, sans-serif;
+			font-weight: 600;
+			line-height: 0.9;
+			color: rgba(242, 234, 216, 0.06);
+			user-select: none;
+			pointer-events: none;
+			z-index: 0;
+		}
+		.glyph-top { top: -60px; right: -90px; font-size: clamp(260px, 44vw, 560px); }
+		.glyph-bottom { bottom: -140px; left: -60px; font-size: clamp(260px, 44vw, 560px); color: rgba(242, 234, 216, 0.05); }
+
+		.page {
+			position: relative;
+			z-index: 1;
+			max-width: 1280px;
+			margin: 0 auto;
+			padding: 48px clamp(24px, 6vw, 72px) 64px;
+			min-height: 100vh;
 			display: flex;
-			gap: 8px;
-			align-items: center;
+			flex-direction: column;
 		}
 
-		.dot { width: 12px; height: 12px; border-radius: 50%; }
-		.red { background: var(--red); }
-		.yellow { background: var(--yellow); }
-		.green { background: var(--green); }
-
-		.content {
-			padding: 25px;
-			line-height: 1.6;
+		/* top meta */
+		.meta {
+			display: flex;
+			justify-content: space-between;
+			font-size: 12px;
+			letter-spacing: 0.3em;
+			color: var(--sage);
 		}
 
-		/* Syntax Highlighting Styles */
-		.prompt { color: var(--pink); font-weight: bold; }
-		.path { color: var(--purple); }
-		.command { color: var(--yellow); }
-		.string { color: var(--yellow); }
-		.comment { color: var(--comment); font-style: italic; }
-		.stat { color: var(--cyan); }
+		/* hero */
+		.hero { margin-top: clamp(72px, 12vh, 132px); }
 
-		h1 { font-size: 1.5rem; color: var(--green); margin: 5px 0 15px 0; }
-		p { margin: 10px 0; }
+		.hero .malayalam {
+			font-family: 'Anek Malayalam', system-ui, sans-serif;
+			font-weight: 300;
+			font-size: clamp(21px, 2.4vw, 30px);
+			color: var(--gold);
+			letter-spacing: 0.06em;
+			margin: 0 0 18px;
+		}
 
-		.cursor {
+		h1 {
+			font-weight: 800;
+			font-size: clamp(64px, 10vw, 128px);
+			line-height: 0.98;
+			letter-spacing: -0.03em;
+			margin: 0;
+		}
+
+		.hero p {
+			font-weight: 300;
+			font-size: clamp(18px, 2vw, 25px);
+			line-height: 1.55;
+			color: var(--cream-dim);
+			max-width: 640px;
+			margin: 38px 0 0;
+			text-wrap: pretty;
+		}
+
+		a { color: var(--cream); transition: color 0.25s; }
+		a:hover { color: var(--gold); }
+		.gold-link {
+			color: var(--gold);
+			text-decoration: none;
+			border-bottom: 1px solid var(--gold);
+		}
+		.gold-link:hover { color: var(--cream); border-color: var(--cream); }
+
+		/* tracks */
+		.tracks {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: clamp(28px, 4vw, 56px);
+			margin-top: clamp(64px, 10vh, 120px);
+			align-items: start;
+		}
+
+		.track {
+			border: 1px solid var(--cream-line);
+			padding: clamp(26px, 3vw, 40px);
+			background: var(--green-panel);
+		}
+
+		.track:nth-child(2) { margin-top: clamp(0px, 6vw, 96px); }
+
+		.track h2 {
+			font-size: 12px;
+			font-weight: 500;
+			letter-spacing: 0.3em;
+			color: var(--gold);
+			margin: 0 0 22px;
+		}
+
+		.track ul { list-style: none; margin: 0; padding: 0; }
+
+		.track li a {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+			padding: 17px 0;
+			border-top: 1px solid var(--cream-hairline);
+			text-decoration: none;
+		}
+
+		.track li a strong {
+			font-weight: 500;
+			font-size: clamp(19px, 1.8vw, 22px);
+		}
+
+		.track li a span {
+			font-weight: 300;
+			font-size: 15px;
+			color: var(--cream-dim);
+		}
+
+		.track-all {
 			display: inline-block;
-			width: 8px;
-			height: 1.2rem;
-			background-color: var(--green);
-			vertical-align: middle;
-			margin-left: 4px;
-			animation: blink 1s infinite;
+			margin-top: 22px;
+			font-size: 13px;
+			letter-spacing: 0.18em;
+			text-decoration: none;
+			border-bottom: 1px solid var(--gold);
+			padding-bottom: 3px;
 		}
 
-		@keyframes blink { 50% { opacity: 0; } }
+		/* footer */
+		footer {
+			margin-top: clamp(72px, 12vh, 140px);
+			border-top: 1px solid var(--cream-line);
+			padding-top: 26px;
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			gap: 20px;
+			flex-wrap: wrap;
+		}
 
-		a { color: var(--cyan); text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; }
-		a:hover { border-bottom: 1px solid var(--cyan); color: var(--green); }
+		footer nav { display: flex; gap: clamp(22px, 3vw, 40px); flex-wrap: wrap; }
+		footer nav a { font-size: 15px; text-decoration: none; }
+		footer .sign {
+			font-size: 12px;
+			color: var(--sage);
+			letter-spacing: 0.2em;
+		}
 
-		ul { list-style: none; padding: 0; margin: 10px 0; }
-		li::before { content: "➜ "; color: var(--pink); }
+		@media (max-width: 720px) {
+			.tracks { grid-template-columns: minmax(0, 1fr); }
+			.track:nth-child(2) { margin-top: 0; }
+		}
 	</style>
 </head>
 <body>
 
-<div class="terminal">
-	<div class="bar">
-		<div class="dot red"></div>
-		<div class="dot yellow"></div>
-		<div class="dot green"></div>
-		<span style="margin-left: 10px; font-size: 0.8rem; color: var(--comment)">joel@kerala-india: ~</span>
-	</div>
-	<div class="content">
-		<p><span class="prompt">joeljames</span>@<span class="path">kerala-india</span>:~$ whoami</p>
-		<h1>Joel James</h1>
-		<p class="comment">// Open Source Developer & Algorithmic Trader</p>
+<div class="rain" aria-hidden="true"></div>
+<div class="glyph glyph-top" aria-hidden="true">ജോ</div>
+<div class="glyph glyph-bottom" aria-hidden="true">യൽ</div>
 
-		<p><span class="prompt">joeljames</span>@<span class="path">kerala-india</span>:~$ cat info.json</p>
-		<p style="padding-left: 20px;">
-			{<br>
-			&nbsp;&nbsp;"location": <span class="string">"Kerala, India"</span>,<br>
-			&nbsp;&nbsp;"builds": [<span class="string">"WordPress Plugins"</span>, <span class="string">"PHP Libraries"</span>, <span class="string">"Dev Tooling"</span>],<br>
-			&nbsp;&nbsp;"trades": [<span class="string">"Algo Strategies"</span>, <span class="string">"MQL5 EAs"</span>, <span class="string">"Backtesting"</span>],<br>
-			&nbsp;&nbsp;"status": <span class="string">"Building in the open"</span><br>
-			}
-		</p>
+<div class="page">
+	<header class="meta">
+		<div>9.93° N, 76.26° E</div>
+		<div>KERALA · INDIA</div>
+	</header>
 
-		<p><span class="prompt">joeljames</span>@<span class="path">kerala-india</span>:~$ git log --oneline --author=joel</p>
-		<ul>
-			<li><span class="stat">feat</span> — open-source WordPress plugins &amp; PHP libraries</li>
-			<li><span class="stat">feat</span> — reusable developer tooling &amp; packages</li>
-			<li><span class="stat">feat</span> — automated trading systems (MQL5 EAs)</li>
-			<li><span class="stat">feat</span> — strategy backtesting &amp; risk management</li>
-		</ul>
+	<main>
+		<section class="hero">
+			<p class="malayalam" lang="ml">ജോയൽ ജെയിംസ്</p>
+			<h1>Joel<br>James</h1>
+			<p>Open source developer and algorithmic trader, working from the monsoon coast. Everything I build lives at <a class="gold-link" href="https://foxelabs.com">Foxe Labs</a> — lines of code, lines on the chart.</p>
+		</section>
 
-		<p><span class="prompt">joeljames</span>@<span class="path">kerala-india</span>:~$ ls project-links/</p>
-		<ul>
-			<li><a href="https://foxelabs.com/" target="_blank">Foxe Labs</a> <span class="comment">(Algorithmic Trading)</span></li>
-			<li><a href="https://duckdev.com/" target="_blank">Duck Dev</a> <span class="comment">(Open Source / WordPress)</span></li>
-			<li><a href="https://github.com/joel-james" target="_blank">GitHub</a> <span class="comment">(Code & Repos)</span></li>
-			<li><a href="https://linkedin.com/in/joelcj/" target="_blank">LinkedIn</a> <span class="comment">(Professional)</span></li>
-		</ul>
+		<section class="tracks" aria-label="Work">
+			<article class="track">
+				<h2>TRACK 01 — SOFTWARE</h2>
+				<ul>
+					<li>
+						<a href="https://foxelabs.com/software/plugins/404-to-301/">
+							<strong>404 to 301</strong>
+							<span>Smart redirects — 100,000+ active installs</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://foxelabs.com/software/plugins/loggedin/">
+							<strong>Loggedin</strong>
+							<span>Limit active logins per WordPress user</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://foxelabs.com/software/plugins/lazy-load-for-comments/">
+							<strong>Lazy Load for Comments</strong>
+							<span>Defer comments until the reader wants them</span>
+						</a>
+					</li>
+				</ul>
+				<a class="track-all" href="https://foxelabs.com/software/">ALL SOFTWARE ↗</a>
+			</article>
 
-		<p><span class="prompt">joeljames</span>@<span class="path">kerala-india</span>:~$ <span class="cursor"></span></p>
-	</div>
+			<article class="track">
+				<h2>TRACK 02 — TRADING</h2>
+				<ul>
+					<li>
+						<a href="https://foxelabs.com/trading/expert-advisors/gold-scalpel/">
+							<strong>Gold Scalpel</strong>
+							<span>XAUUSD breakout scalper that protects every trade early</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://tickerlog.io">
+							<strong>TickerLog</strong>
+							<span>A trading journal that reads your broker, not your memory</span>
+						</a>
+					</li>
+				</ul>
+				<a class="track-all" href="https://foxelabs.com/trading/">ALL TRADING ↗</a>
+			</article>
+		</section>
+	</main>
+
+	<footer>
+		<nav aria-label="Profiles">
+			<a href="https://foxelabs.com" rel="me">Foxe Labs</a>
+			<a href="https://github.com/joel-james" rel="me">GitHub</a>
+			<a href="https://linkedin.com/in/joelcj/" rel="me">LinkedIn</a>
+			<a href="mailto:mr.joelcj@gmail.com">Email</a>
+		</nav>
+		<div class="sign">MADE WHERE THE RAIN IS</div>
+	</footer>
 </div>
 
 </body>
